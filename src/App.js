@@ -1,29 +1,52 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './App.css';
-import Row from './Row';
-import requests from './requests';
-import Banner from './Banner';
-import Nav from './Nav';
+import HomeScreen from './screen/HomeScreen';
+import LoginScreen from './screen/LoginScreen';
+import { BrowserRouter as  Router, Switch, Route,} from 'react-router-dom';
+import { auth } from './firebase';
+import { useDispatch, useSelector} from "react-redux"
+import { login, logout, selectUser, Provider } from "./features/useSlice"
+import ProfileScreen from './screen/ProfileScreen';
+
 function App() {
+  const user = useSelector(selectUser);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+     const unsubscribe = auth().onAuthStateChanged(userAuth => {
+      if (userAuth) { 
+        //Logged in
+        dispatch(login({
+          uid: userAuth.uid,
+          email: userAuth.email,
+          })
+        );
+      } else {
+        // Logged out
+        dispatch(logout())
+      }
+     });
+     return unsubscribe;
+    
+  }, [dispatch]);
+
   return (
     <div className="app">
-     {/* Nav */}
-     {/* Banner */}
-     <Nav />
-     <Banner />
-     <Row 
-      title = "NETFLIX ORIGINALS" 
-      fetchUrl = {requests.fetchNetflixOriginals} 
-      isLargeRow = {true}
-      />
-     <Row title = "Trending Now" fetchUrl = {requests.fetchTrending} />
-     <Row title = "Top Rated" fetchUrl = {requests.fetchTopRated} />
-     <Row title = "Action Movies" fetchUrl = {requests.fetchActionMovies} />
-     <Row title = "Comedy Movies" fetchUrl = {requests.fetchComedyMovies} />
-     <Row title = "Horror Movies" fetchUrl = {requests.fetchHorrorMovies} />
-     <Row title = "Romance Movies" fetchUrl = {requests.fetchRomanceMovies} />
-     <Row title = "Documentaries" fetchUrl = {requests.fetchDocumentaries} />
-     </div>
+        <Router>
+          {!user ? (
+            <LoginScreen />
+          ) : (
+            <Switch>
+            <Route path='/profile'>
+              <ProfileScreen />
+            </Route>
+            <Route exact path = "/">
+              <HomeScreen /> 
+            </Route>
+          </Switch>
+          )}
+        </Router>
+    </div>
   );
 }
 

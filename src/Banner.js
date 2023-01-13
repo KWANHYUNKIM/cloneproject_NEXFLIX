@@ -18,6 +18,7 @@ function Banner() {
         }
         fetchData();
   }, []);
+
   console.log(movie);
 
   function truncate(str, n) {
@@ -31,7 +32,7 @@ function Banner() {
             backgroundImage: `url(
                 "http://image.tmdb.org/t/p/original/${movie?.backdrop_path}"
             )`,
-            backgroundPosition: "center center"
+            backgroundPosition: "center center",
         }}
         > 
     <div calssName = "banner__contents">

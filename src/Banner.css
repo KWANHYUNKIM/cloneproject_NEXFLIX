@@ -1,4 +1,5 @@
 .banner {
+    position: relative;
     color: white;
     object-fit : contain;
     height: 448px;
@@ -23,6 +24,7 @@
     padding-top: 1rem;
     font-size: 0.8rem;
     max-width: 360px;
+    height: 80px;
 }
 
 .banner__button {

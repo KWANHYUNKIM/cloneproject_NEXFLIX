@@ -10,7 +10,7 @@ function LoginScreen() {
         <div className = "loginScreen__background">
             <img 
             className="loginScreen__logo"
-            src = "https://assets.stickpng.com/images/580b57fcd9996e24bc43c529.png" 
+            src = "https://www.edigitalagency.com.au/wp-content/uploads/Netflix-logo-red-black-png.png" 
             alt=""
             />
 
@@ -26,10 +26,9 @@ function LoginScreen() {
               <SignupScreen />
             ) : (
               <>
-              <h1>Unlimited films, TV programmes and 
-              more.</h1>
+              <h1>Unlimited movies, TV shows, and more.</h1>
               <h2>
-                Watch anywhere. Cancel at any time.
+                Watch anywhere. Cancel anytime.
               </h2>
               <h3>
                 Ready to watch? Enter your email to create or restart your membership.

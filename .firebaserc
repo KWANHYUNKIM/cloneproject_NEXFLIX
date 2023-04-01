@@ -1,5 +1,9 @@
 {
   "projects": {
-    "default": "netflix-clone-9c59a"
-  }
+    "default": "netflix-clone-bd7ee",
+    "n": "netflixclone-a6696",
+    "yes": "netflix-clone-bd7ee"
+  },
+  "targets": {},
+  "etags": {}
 }

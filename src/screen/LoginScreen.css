@@ -2,7 +2,8 @@
     position : relative;
     height : 100%;
     background : url("https://mebincdn.themebin.com/1664271579476.jpg") center no-repeat;
-    background-size: cover;
+    background-size: cover; /* 배경화면 꽉차게 */
+     
 }   
 
 
@@ -77,9 +78,10 @@
 }
 
 .loginScreen__input > form > input {
-    padding: 10px;
+    padding: 8px 10px;
     border-radius: 0.25rem;
     outline-width: 0;
+
     height: 30px;
     width: 30%;
     border: none;
@@ -93,16 +95,17 @@
 }
 
 .loginScreen_getStarted {
-    padding: 16px 20px;
+    padding: 16px 25px;
+    margin : 10px;
     right : 30px;
     top: 30px;
     text-align: center;
     width: auto;
     border-radius: 0.25rem;
+    font-weight: bold;
     font-size: 0.875rem;
     font-weight: 500;
     min-height: 2rem;
-    padding: 0.25rem 1rem;
     background: rgb(229,9,20);
     color: rgb(255,255,255);
     border: none;

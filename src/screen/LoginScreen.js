@@ -36,10 +36,12 @@ function LoginScreen() {
   
               <div className="loginScreen__input">
                 <form>
-                  <input type='email' placeholder="Email Address" />
+                  <input type='email' placeholder="Email Address" 
+                  onfocus= ""
+                  />
                   <button 
                   onClick = {() => setSignIn(true)}
-                  className='loginScreen_getStarted'>GET STARTED</button>
+                  className='loginScreen_getStarted'>GET STARTED ></button>
                 </form>
               </div>
             </>

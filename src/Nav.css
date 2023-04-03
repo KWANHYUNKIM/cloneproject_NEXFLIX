@@ -12,7 +12,6 @@
 
 .nav__black {
     background-color: #111;
-    
 }
 
 .nav__logo {
@@ -25,7 +24,50 @@
 .nav__avatar {
     position: fixed;
     right: 20px;
+    top: 10px;
     width: 30px;
     object-fit: contain;
+}
 
+.nav-item a:link{
+    text-decoration: none;
+    
+    
+}
+.nav-item-home {
+    position: fixed;
+    left: 120px;
+    color: #fff;
+
+}
+
+.nav-item-tvshows {
+    position: fixed;
+    left: 180px;
+    color: #fff;
+    
+}
+
+.nav-item-movies {
+    position: fixed;
+    left: 270px;
+    color: #fff;
+}
+
+.nav-item-new {
+    position: fixed;
+    left: 340px;
+    color: #fff;
+}
+
+.nav-item-mylist {
+    position: fixed;
+    left: 460px;
+    color: #fff;
+}
+
+.nav-item-browse {
+    position: fixed;
+    left: 530px;
+    color: #fff;
 }

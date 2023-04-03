@@ -1,5 +1,6 @@
 import React, { useState, useEffect  } from 'react'
 import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Nav.css';
 
 const Nav = () => {
@@ -24,7 +25,14 @@ const Nav = () => {
             src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg"
             alt="Netflix Logo"
         />
-
+        <div className = 'nav-item'>
+          <Link to="/" className="nav-item-home">Home</Link>
+          <Link to="/movies" className="nav-item-tvshows">Tv Shows</Link>
+          <Link to="/movies" className="nav-item-movies">Movies</Link>
+          <Link to="/movies" className="nav-item-new">New & Popular</Link>
+          <Link to="/movies" className="nav-item-mylist">My List</Link>
+          <Link to="/movies" className="nav-item-browse">Browse by Languages</Link>
+        </div>
         <img
             onClick={() =>history.push("/profile")}
             className ="nav__avatar"

@@ -1,0 +1,51 @@
+.notfoundScreen  {
+    position : relative;
+    height : 100%;
+    background : center no-repeat;
+    background-size: cover; /* 배경화면 꽉차게 */
+     
+}   
+
+.notfoundScreen__background{
+    position: absolute;
+    top: 30%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    z-index : 1;
+    color: #fff;
+    padding: 10px;
+    left: 0;
+    right: 0;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.notfoundScreen__body > h3{
+    font-size : 46px;
+    margin : 24px;
+
+}
+
+.notfoundScreen__body > h6{
+    margin : 24px;
+
+}
+
+.notfoundScreen_home {
+    padding: 16px 25px;
+    margin : 10px;
+    right : 30px;
+    top: 30px;
+    text-align: center;
+    width: auto;
+    border-radius: 0.25rem;
+    font-weight: bold;
+    font-size: 0.875rem;
+    font-weight: 500;
+    min-height: 2rem;
+    color: rgb(1, 1, 1);
+    background: rgb(255,255,255);
+    border: none;
+    cursor: pointer;
+}

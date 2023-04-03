@@ -6,7 +6,9 @@ import LoginScreen from "./screen/LoginScreen";
 import { auth } from './firebase';
 import { useDispatch, useSelector } from "react-redux";
 import { login, logout, selectUser } from './features/userSlice';
-import ProfileScreen from "./screen/ProfileScreen";
+import ProfileScreen from "./screen/ProfileScreen"; 
+import NotFound from "./NotFound";
+
 function App() {
   const user = useSelector(selectUser);
   const dispatch = useDispatch();
@@ -31,7 +33,8 @@ function App() {
 
   return (
     <div className="app">
-        <Router>
+      
+        <Router>  
         {!user ? (
           <LoginScreen />
         ) : (
@@ -42,6 +45,7 @@ function App() {
           <Route exact path = "/">
               <HomeScreen /> 
           </Route>
+          <Route path={"*"} component={NotFound} />
           </Switch>
           )}
           </Router>

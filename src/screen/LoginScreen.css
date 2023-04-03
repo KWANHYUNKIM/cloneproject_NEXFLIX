@@ -5,9 +5,6 @@
     background-size: cover; /* 배경화면 꽉차게 */
      
 }   
-
-
-
 .loginScreen__gradient {
     width: 100%;
     z-index: 1;

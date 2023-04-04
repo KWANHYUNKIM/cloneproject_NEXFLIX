@@ -1,4 +1,8 @@
 .app {
     background-color : #111;
   }
+.homeScreen__title {
+    font-size : 14px;
+    padding-top: 10px;
+  }
   

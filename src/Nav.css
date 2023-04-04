@@ -2,8 +2,8 @@
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 20px; 
-    z-index: 1px;
+    padding: 40px; 
+    z-index: 100;
 
     /* Animations */
     transition-timing-function: ease-in;
@@ -16,15 +16,16 @@
 
 .nav__logo {
     position: fixed;
-    left: 20px;
+    top: 30px;
+    left: 30px;
     width: 80px;
     object-fit: contain;
 }
 
 .nav__avatar {
     position: fixed;
-    right: 20px;
-    top: 10px;
+    right: 50px;
+    top: 30px;
     width: 30px;
     object-fit: contain;
 }
@@ -36,38 +37,44 @@
 }
 .nav-item-home {
     position: fixed;
-    left: 120px;
+    top: 30px;
+    left: 130px;
     color: #fff;
 
 }
 
 .nav-item-tvshows {
     position: fixed;
-    left: 180px;
+    top: 30px;
+    left: 190px;
     color: #fff;
     
 }
 
 .nav-item-movies {
     position: fixed;
-    left: 270px;
+    top: 30px;
+    left: 280px;
     color: #fff;
 }
 
 .nav-item-new {
     position: fixed;
-    left: 340px;
+    top: 30px;
+    left: 350px;
     color: #fff;
 }
 
 .nav-item-mylist {
     position: fixed;
-    left: 460px;
+    top: 30px;
+    left: 470px;
     color: #fff;
 }
 
 .nav-item-browse {
     position: fixed;
-    left: 530px;
+    top: 30px;
+    left: 540px;
     color: #fff;
 }

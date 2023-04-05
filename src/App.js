@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useEffect} from 'react';
 import './App.css';
 import HomeScreen from './screen/HomeScreen';
-import { BrowserRouter as  Router, Switch, Route,} from 'react-router-dom';
+import { BrowserRouter as  Router, Switch, Route} from 'react-router-dom';
 import LoginScreen from "./screen/LoginScreen";
 import { auth } from './firebase';
 import { useDispatch, useSelector } from "react-redux";
@@ -27,24 +27,23 @@ function App() {
         dispatch(logout())
       }
    });
-
     return unsubscribe;
   }, [dispatch]);
 
   return (
     <div className="app">
-      
+    
         <Router>  
         {!user ? (
           <LoginScreen />
         ) : (
           <Switch>
-            <Route path='/profile'>
+          <Route exact path = "/">
+            <HomeScreen />           
+          </Route>
+          <Route path='/profile'>
               <ProfileScreen />
             </Route>
-          <Route exact path = "/">
-              <HomeScreen /> 
-          </Route>
           <Route path={"*"} component={NotFound} />
           </Switch>
           )}

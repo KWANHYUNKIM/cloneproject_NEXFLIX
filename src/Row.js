@@ -3,6 +3,8 @@ import axios from './axios';
 import "./Row.css";
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
+;
+
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -21,7 +23,7 @@ function Row({ title, fetchUrl, isLargeRow }) {
     //console.log(movies[1].overview) //movies 정보 확인 할 수 있음 
 
     const opts = {
-        height: "390",
+        height: "500",
         width: "100%",
         playerVars: {
             autoplay: 1,
@@ -44,27 +46,31 @@ function Row({ title, fetchUrl, isLargeRow }) {
     };
 
     return (
-        <div className ="row">
+            <div className ="row">
+                
             <h2>{title}</h2>
-
+                
+                
             <div className ="row__posters">
-            {movies.map((movie) => ((isLargeRow && movie.poster_path) ||
-                (!isLargeRow && movie.backdrop_path)) && (
-                <img 
-                className = {`row__poster ${isLargeRow && "row__posterLarge"}`} 
-                key = {movie.id}
-                onClick={() => handleClick(movie)}  
-                src = {`${base_url}${
+                {movies.map((movie) => ((isLargeRow && movie.poster_path) ||
+                    (!isLargeRow && movie.backdrop_path)) && (
+                    <img 
+                     className = {`row__poster ${isLargeRow && "row__posterLarge"}`} 
+                    key = {movie.id}
+                    onClick={() => handleClick(movie)}  
+                     src = {`${base_url}${
                     isLargeRow ? movie.poster_path : movie.backdrop_path 
-                }`} 
-                loading ="lazy"
-                alt ={movie.name} 
-                />
-                )
-            )}
+                    }`} 
+                    loading ="lazy"
+                    alt ={movie.name} 
+                    />
+                    )
+                )} 
+                </div>
+                {trailerUrl && <YouTube videoId ={trailerUrl} opts = {opts}   />}
+            
             </div>
-            {trailerUrl && <YouTube videoId ={trailerUrl} opts = {opts}   />}
-        </div>
+                
   );
 }
 

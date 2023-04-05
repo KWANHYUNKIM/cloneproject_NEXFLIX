@@ -33,6 +33,13 @@ const Nav = () => {
           <Link to="/movies" className="nav-item-mylist">My List</Link>
           <Link to="/movies" className="nav-item-browse">Browse by Languages</Link>
         </div>
+        <div className = 'nav__search'>
+          <input type="text" placeholder= "Titles,people,genres">
+          </input>
+        </div>
+        <div className = 'nav__notification'>
+          
+        </div>
         <img
             onClick={() =>history.push("/profile")}
             className ="nav__avatar"

@@ -24,10 +24,23 @@
 
 .nav__avatar {
     position: fixed;
-    right: 50px;
+    right: 30px;
     top: 30px;
     width: 30px;
     object-fit: contain;
+}
+
+
+.nav__search {
+    position: fixed;
+    right: 320px;
+    top: 30px;
+    width: 30px;
+    object-fit: contain;
+}
+.nav__search > input {
+    width: 200px;
+    height: 30px;
 }
 
 .nav-item a:link{

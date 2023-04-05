@@ -3,7 +3,6 @@ import axios from './axios';
 import "./Row.css";
 import YouTube from 'react-youtube';
 import movieTrailer from 'movie-trailer';
-
 const base_url = "http://image.tmdb.org/t/p/original/";
 
 function Row({ title, fetchUrl, isLargeRow }) {
@@ -19,7 +18,8 @@ function Row({ title, fetchUrl, isLargeRow }) {
         }
         fetchData();
     }, [fetchUrl]);
-    console.log("traileUrl value : "+trailerUrl) //movies 정보 확인 할 수 있음 
+    //console.log(movies[1].overview) //movies 정보 확인 할 수 있음 
+
     const opts = {
         height: "390",
         width: "100%",
@@ -57,12 +57,13 @@ function Row({ title, fetchUrl, isLargeRow }) {
                 src = {`${base_url}${
                     isLargeRow ? movie.poster_path : movie.backdrop_path 
                 }`} 
+                loading ="lazy"
                 alt ={movie.name} 
                 />
                 )
             )}
             </div>
-            {trailerUrl && <YouTube videoId ={trailerUrl} opts = {opts}  />}
+            {trailerUrl && <YouTube videoId ={trailerUrl} opts = {opts}   />}
         </div>
   );
 }

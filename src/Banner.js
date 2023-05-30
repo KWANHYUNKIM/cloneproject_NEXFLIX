@@ -3,6 +3,8 @@ import axios from './axios';
 import requests from './requests';
 import { useHistory } from 'react-router-dom';
 import Spinner from "./Loading";
+import MoreInfo from "./Modal";
+import ReactPlayer from 'react-player/lazy'
 import './Banner.css';
 
 
@@ -10,13 +12,23 @@ import './Banner.css';
 function Banner() {
     const [movie, setMovie] = useState ([]);
     const [loading, setLoading] = useState(true);
+
+    const [modalOpen, setModalOpen] = useState(false);
+
+    const openModal = () => {
+      setModalOpen(true);
+    };
+    const closeModal = () => {
+      setModalOpen(false);
+    };
+
     const history = useHistory(); 
     const timeout = () => {
         setTimeout(() => {
           history.push('/browse');
         }, 200000);
       };
-
+    
     useEffect(() => {
         timeout();
         return () => {
@@ -68,7 +80,19 @@ function Banner() {
         
         <div className = "banner__buttons">
             <button className ="banner__button">▶︎ Play</button>
-            <button className ="banner__button">ⓘ More Info</button>
+            <button onClick={openModal} className ="banner__button">ⓘ More Info</button>
+
+            <MoreInfo open={modalOpen} close={closeModal} header={movie?.title}>
+            <ReactPlayer 
+              className="react-player" 
+              url= 'https://www.youtube.com/watch?v=ap-MF1bYzx0'
+              width="100%" 
+              height="100%" 
+              muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+              playing={true} 
+              loop={true} />
+              <main> {movie?.overview} </main>
+            </MoreInfo>
         </div>
     </div>
 

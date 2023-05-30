@@ -1,6 +1,6 @@
 import React from "react";
 import { ClipLoader } from "react-spinners";
-
+import './Loading.css';
 const override = {
   display: "flex",
   margin: "0 auto",
@@ -10,7 +10,7 @@ const override = {
 
 const Loading = ({ loading }) => {
   return (
-    <div>
+    <div className = "loadingScreen">
       <ClipLoader
         color="#E50915"
         loading={loading}

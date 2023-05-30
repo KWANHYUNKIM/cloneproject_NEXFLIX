@@ -1,7 +1,7 @@
 /* picture */
 .banner {
     position: relative;
-    color: white;
+    color: black;
     object-fit : contain;
     height: 448px;
     z-index: 10;

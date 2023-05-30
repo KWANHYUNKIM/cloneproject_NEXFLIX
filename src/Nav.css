@@ -29,20 +29,21 @@
     width: 30px;
     object-fit: contain;
 }
+ 
+ .search-box {
+     position: absolute;
+     transform: translate(-50%, -50%);
+     top:55%;
+     left:80%;
+ }
 
-
-.nav__search {
-    position: fixed;
-    right: 320px;
-    top: 30px;
-    width: 30px;
-    object-fit: contain;
+.search-bnt {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:60%;
+    left:80%;
 }
-.nav__search > input {
-    width: 200px;
-    height: 30px;
-}
-
+ 
 .nav-item a:link{
     text-decoration: none;
     

@@ -81,18 +81,21 @@ function Banner() {
         <div className = "banner__buttons">
             <button className ="banner__button">▶︎ Play</button>
             <button onClick={openModal} className ="banner__button">ⓘ More Info</button>
-
-            <MoreInfo open={modalOpen} close={closeModal} header={movie?.title}>
-            <ReactPlayer 
-              className="react-player" 
-              url= 'https://www.youtube.com/watch?v=ap-MF1bYzx0'
-              width="100%" 
-              height="100%" 
-              muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
-              playing={true} 
-              loop={true} />
-              <main> {movie?.overview} </main>
-            </MoreInfo>
+          <div className = "banner__moreinfo">
+              <MoreInfo open={modalOpen} close={closeModal} header={movie?.name}>
+              <ReactPlayer 
+                className="react-player" 
+                url= 'https://www.youtube.com/watch?v=ap-MF1bYzx0'
+                width="100%" 
+                height="100%" 
+                muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+                playing={true} 
+                loop={true} />
+                <h1> {movie?.name} </h1>
+                <h2> {movie?.year}</h2>
+                <main> {movie?.overview} </main>
+              </MoreInfo>
+            </div>
         </div>
     </div>
 

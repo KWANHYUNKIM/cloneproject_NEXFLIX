@@ -1,7 +1,7 @@
 /* picture */
 .banner {
     position: relative;
-    color: black;
+    color: white;
     object-fit : contain;
     height: 448px;
     z-index: 10;
@@ -62,3 +62,10 @@
         #111
     );
 }
+.banner__moreinfo > ReactPlayer {
+    padding-top: 1.5rem;
+}
+.banner__moreinfo > MoreInfo > ReactPlayer > h1 {
+    padding-top: 1.5rem;
+}
+

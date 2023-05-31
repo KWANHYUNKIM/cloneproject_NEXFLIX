@@ -1,10 +1,17 @@
 .loginScreen {
+    background-color: black;
+     
+}   
+
+.loginScreen__background {
     position : relative;
     height : 100%;
     background : url("https://mebincdn.themebin.com/1664271579476.jpg") center no-repeat;
     background-size: cover; /* 배경화면 꽉차게 */
-     
-}   
+}
+.loginScreen__logo{
+    padding-top: 30px;
+}
 .loginScreen__gradient {
     width: 100%;
     z-index: 1;
@@ -86,7 +93,6 @@
 
 }
 
-
 .loginScreen__input {
     margin: 20px;
 }
@@ -108,3 +114,94 @@
     border: none;
     cursor: pointer;
 }
+
+.loginScreen__body__adverisement {
+    color: rgb(255,255,255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top : 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.loginScreen__body__adverisement > h2 {
+    margin-top : 20px;
+    font-size : 1.42rem;
+    font-weight: 400;
+  
+}
+
+.loginScreen__body__adverisement > h3 {
+    opacity: 0.8;
+}
+
+.loginScreen__adverisement__image {
+    position: relative;
+    margin : 30px;
+    text-align: center;
+}
+
+.loginScreen__adverisement__image__middle {
+    position : relative;
+    z-index: 1;
+}
+
+.loginScreen__adverisement__image__left{
+    position : absolute;
+    bottom : 20px;
+    right: 240px; 
+    z-index: 0;
+    opacity : 0.5;
+
+}
+
+.loginScreen__adverisement__image__right{
+    position : absolute;
+    bottom: 20px;
+    right: 640px; 
+    z-index: 0;
+    opacity : 0.5;
+}
+
+.loginScreen__body__adverisement__chapter__two {
+    color: rgb(255,255,255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top : 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.loginScreen__body__adverisement__chapter__two > h2{
+    margin-top : 20px;
+    font-size : 1.42rem;
+    font-weight: 400;
+}
+
+.loginScreen__body__adverisement__chapter__two > h3{
+    opacity: 0.8;
+    font-size : 1.42rem;
+}
+
+
+@keyframes move {
+    from {
+		transform: translate(0, 0);
+	}
+	to {
+		transform: translate(100px, 100px);
+	}
+}
+
+.loginScreen__body__adverisement__chapter__two__image {
+    display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 200px;
+	height: 200px;
+	border: 2px solid black;
+	background-color: rgba(255, 255, 0, 0.7);
+	animation: move 1s linear forwards; 
+}
+
+

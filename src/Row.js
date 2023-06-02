@@ -3,7 +3,7 @@ import axios from './axios';
 import "./Row.css";
 import ReactPlayer from 'react-player/lazy'
 import movieTrailer from 'movie-trailer';
-;
+
 
 const base_url = "http://image.tmdb.org/t/p/original/";
 
@@ -25,18 +25,20 @@ function Row({ title, fetchUrl, isLargeRow }) {
     
     const handleClick = (movie) => {
         if (trailerUrl){
+            console.log(movie?.name);
             setTrailerUrl("");
             
         } else {
             movieTrailer(movie?.name || "")
             .then(url => {
                 const urlParams = new URLSearchParams(new URL(url).search);
+                console.log(movie?.name);
                 setTrailerUrl(urlParams.get('v'));
             })
             .catch(error => console.log(error));
         }
     };
-
+    //console.log(trailerUrl);
     return (
             <div className ="row">
                 

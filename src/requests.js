@@ -17,8 +17,13 @@ const requests = {
     fetchHorrorTv: `/discover/tv?api_key=${API_KEY}&with_genres=27`,
     fetchRomanceTv: `/discover/tv?api_key=${API_KEY}&with_genres=10749`,
     fetchTvDocumentaries: `/discover/tv?api_key=${API_KEY}&with_genres=99`,
+
+    // YoutubekeyData
+
 }
 
 
 
 export default requests;
+export {API_KEY};
+

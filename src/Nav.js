@@ -3,6 +3,8 @@ import { useHistory } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import './Nav.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons";
+import { faBell } from "@fortawesome/free-solid-svg-icons";
 
 const Nav = () => {
   const [show, handleShow] = useState(false); 
@@ -35,19 +37,24 @@ const Nav = () => {
           <Link to="/" className="nav-item-new">New & Popular</Link>
           <Link to="/" className="nav-item-mylist">My List</Link>
           <Link to="/" className="nav-item-browse">Browse by Languages</Link>
+          
+        </div>
+       
+        
+        <div className= 'nav__search__bar'> 
+          <form action="" class="search-bar">
+	        <input type="search" name="search" pattern=".*\S.*" required/>
+	        <button class="search-btn" type="submit">
+	    	  <span>Search</span>
+	        </button>
+          </form>
         </div>
         
-        <div class = "search-box">
-          <input class = "search-txt" type= "text" name = "" placeholder='Type to search'/> 
-            <a class = "search-bnt" href = "#">
-            
-            <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" style={{color: "#f7f7f7",}} />
-            </a>
-
-         </div>
         <div className = 'nav__notification'>
-
+          <FontAwesomeIcon icon={faBell} 
+          />
         </div>
+        
         <img
             onClick={() =>history.push("/profile")}
             className ="nav__avatar"
@@ -58,5 +65,6 @@ const Nav = () => {
     </div>
   )
 }
+
 
 export default Nav

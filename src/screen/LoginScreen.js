@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './LoginScreen.css'
 import SignupScreen from './SignupScreen';
+import ReactPlayer from 'react-player/lazy'
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
@@ -91,8 +92,25 @@ function LoginScreen() {
          at last the Caterpillar took the hookah out of its mouth, and addressed
          her in a languid, sleepy voice.</p>
       </div>
-    </div>
 
+      <div className = "loginScreen__body__adversiement__video">
+      <ReactPlayer 
+                url= 'https://www.youtube.com/watch?v=v1afoRZG0zk'
+                width='800px'         // 플레이어 크기 (가로)
+                height='500px'        // 플레이어 크기 (세로)
+                
+                controls={true}   
+                muted={true} //chrome정책으로 인해 자동 재생을 위해 mute 옵션을 true로 해주었다.
+                playing={true} 
+                loop={true} />
+      </div>
+
+      <div className = "loginScreen__body__adverisement__chapter__three">
+        <h1>똑똑하게 보는 재미</h1>
+        <h2>최신 방송을 가장 빠르고 간편하게 시청하세요!</h2>
+        <h3>실시간TV,퀵VOD,타임머신 기능으로 기다리지말고 편리하게 시청</h3>
+      </div>
+    </div>
   )
 }
 

@@ -136,20 +136,23 @@
 }
 
 .loginScreen__adverisement__image {
+    display: flex;
+    justify-content: center;
     position: relative;
-    margin : 30px;
-    text-align: center;
+    width : 1650px;
 }
 
 .loginScreen__adverisement__image__middle {
     position : relative;
+    justify-content: center;
     z-index: 1;
 }
 
 .loginScreen__adverisement__image__left{
     position : absolute;
+    justify-content: center;
     bottom : 20px;
-    right: 240px; 
+    right : 520px; 
     z-index: 0;
     opacity : 0.5;
 
@@ -157,8 +160,9 @@
 
 .loginScreen__adverisement__image__right{
     position : absolute;
+    justify-content: center;
     bottom: 20px;
-    right: 640px; 
+    right: 900px; 
     z-index: 0;
     opacity : 0.5;
 }
@@ -202,6 +206,34 @@
 	border: 2px solid black;
 	background-color: rgba(255, 255, 0, 0.7);
 	animation: move 1s linear forwards; 
+}
+
+.loginScreen__body__adversiement__video  {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.loginScreen__body__adverisement__chapter__three {
+    color: rgb(255,255,255);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-top : 50px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.loginScreen__body__adverisement__chapter__three > h2{
+    margin-top : 20px;
+    font-size : 1.42rem;
+    font-weight: 400;
+}
+
+.loginScreen__body__adverisement__chapter__three > h3{
+    opacity: 0.8;
+    font-size : 1.42rem;
 }
 
 

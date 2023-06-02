@@ -62,10 +62,15 @@
         #111
     );
 }
-.banner__moreinfo > ReactPlayer {
-    padding-top: 1.5rem;
+.banner__moreinfo__description > h1 {
+   padding-top : 15px;
+   color : black;
 }
-.banner__moreinfo > MoreInfo > ReactPlayer > h1 {
-    padding-top: 1.5rem;
+.banner__moreinfo__description > h2 {
+    padding-top : 15px;
+}
+
+.banner__moreinfo > main {
+    margin : 15px;
 }
 

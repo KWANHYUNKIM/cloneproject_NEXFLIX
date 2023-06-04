@@ -5,4 +5,55 @@
     font-size : 14px;
     padding-top: 10px;
   }
-  
+
+ .tvshowScreen-description{
+  color : white;
+  position : relative;
+  text-align: center;
+  z-index: 1;
+  bottom: 300px;
+ } 
+
+
+.weegle {
+    width: 400px;
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+.tvshowScreen-search {
+    position: relative;
+    text-align: center;
+    margin: 0 auto;
+    bottom: 200px;
+    right : 100px;
+    z-index : 1;
+
+}
+.tvshowScreen-search > input {
+    position: absolute;
+    width: 60%;
+    border-radius: 20px;
+    border: 1px solid #bbb;
+    margin: 10px 0;
+    padding: 10px 12px;
+    color : black;
+    left: 450px;
+}
+
+.tvshowScreen-search-button{
+  position: absolute;
+  z-index : 1;
+  font-size: 14px;
+  padding : 11px;
+  font-weight: bold;
+  background-color: skyblue;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  top: 10px;
+  left: 1400px;
+  right: 190px;
+  cursor: pointer;
+}

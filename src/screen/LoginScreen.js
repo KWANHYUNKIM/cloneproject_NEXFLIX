@@ -5,7 +5,7 @@ import ReactPlayer from 'react-player/lazy'
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
-
+  
   return (
     <div className = "loginScreen">
       <div className = "loginScreen__background">
@@ -35,14 +35,13 @@ function LoginScreen() {
               </h3>
               <div className="loginScreen__input">
                 <form>
-                  <input type='email' placeholder="Email Address" 
-                  onfocus= ""
-                  />
-                  <button 
-                  onClick = {() => setSignIn(true)}
-                  className='loginScreen_getStarted'>GET STARTED &gt;</button>
+                  <input type='email' placeholder="Email Address" />
                 </form>
               </div>
+              
+              <button 
+                  onClick = {() => setSignIn(true)}
+                  className='loginScreen_getStarted'>GET STARTED &gt;</button>
             </>
             )}
         </div>
@@ -88,9 +87,57 @@ function LoginScreen() {
       </div>
 
       <div className = "loginScreen__body__adverisement__chapter__two__image">
-      <p>The Caterpillar and Alice looked at each other for some time in silence:
-         at last the Caterpillar took the hookah out of its mouth, and addressed
-         her in a languid, sleepy voice.</p>
+      <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001696917.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001706762.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001715488.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001723203.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       </div>
+      <div className = "loginScreen__body__adverisement__chapter__three__image">
+      <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001710496.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+      <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001718223.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001701130.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+       <img
+            src = "https://image.tving.com/upload/cms/caip/CAIP1500/P001716794.jpg/dims/resize/F_webp,1024"
+            alt = ""
+            width={325}
+            height = {225}
+            />
+
       </div>
 
       <div className = "loginScreen__body__adversiement__video">
@@ -110,7 +157,23 @@ function LoginScreen() {
         <h2>최신 방송을 가장 빠르고 간편하게 시청하세요!</h2>
         <h3>실시간TV,퀵VOD,타임머신 기능으로 기다리지말고 편리하게 시청</h3>
       </div>
+
+      <div className = "loginScreen__body__gif__image">
+         <img src = "../../img/short.gif"/>    
+      </div>
+
+      <div className = "loginScreen__body__adverisement__chapter__three">
+        <h1>함께 즐기는 재미</h1>
+        <h2>다양한 기기로 즐겨보세요!</h2>
+        <h3>스마트폰,태블릿,PC,TV,크롬캐스터에서 시청<br></br></h3>
+        <h3>최대4명의 지인들과 함께 구독</h3>
+      </div>
+
+      <div className = "loginScreen__body__gif__image">
+         <img src = "./123.png" alt = 'png'/>    
+      </div>
     </div>
+
   )
 }
 

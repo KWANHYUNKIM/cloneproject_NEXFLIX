@@ -94,6 +94,7 @@
 }
 
 .loginScreen__input {
+    position : relative;
     margin: 20px;
 }
 
@@ -189,23 +190,31 @@
 
 
 @keyframes move {
-    from {
-		transform: translate(0, 0);
-	}
-	to {
-		transform: translate(100px, 100px);
-	}
+    0% {
+        left:0px;
+    }
+    to {
+        left:1000px;
+    }
+}
+.loginScreen__body__adverisement__chapter__two__image {
+    position: relative;
+    padding : 5px;
+	animation: move 5s linear infinite;
 }
 
-.loginScreen__body__adverisement__chapter__two__image {
-    display: flex;
-	align-items: center;
-	justify-content: center;
-	width: 200px;
-	height: 200px;
-	border: 2px solid black;
-	background-color: rgba(255, 255, 0, 0.7);
-	animation: move 1s linear forwards; 
+.loginScreen__body__adverisement__chapter__two__image > img{
+    margin : 10px;
+}
+
+.loginScreen__body__adverisement__chapter__three__image {
+    position: relative;
+    padding : 5px;
+	animation: move 8s linear infinite;
+}
+
+.loginScreen__body__adverisement__chapter__three__image > img{
+    margin : 10px;
 }
 
 .loginScreen__body__adversiement__video  {
@@ -236,4 +245,6 @@
     font-size : 1.42rem;
 }
 
-
+.loginScreen__body__gif__image {
+    text-align: center;
+}

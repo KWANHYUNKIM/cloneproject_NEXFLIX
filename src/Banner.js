@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import axios from './axios';
 import requests from './requests';
-import { useHistory } from 'react-router-dom';
 import Spinner from "./Loading";
 import MoreInfo from "./Modal";
 import ReactPlayer from 'react-player/lazy';
@@ -45,7 +44,6 @@ function Youtubekey(movie) {
     const [apikey, setApi] = useState ([]);
     
     //const store = movie_id;
-    //console.log(movie_id);
     useEffect(() =>{
         async function fetchData(){
         const youtubekey = await axios.get(`https://api.themoviedb.org/3/movie/${movie}/videos?api_key=${API_KEY}`);

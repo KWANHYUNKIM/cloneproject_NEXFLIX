@@ -13,7 +13,7 @@ function NotFound() {
   return (
     <div className = "notfoundScreen">
         <img
-            className = "notfoundScreen__img"
+            className = "notfoundScreen__"
             src = "https://www.usmagazine.com/wp-content/uploads/2022/11/will-there-be-a-lost-in-space-season-4-everything-to-know-01.jpg"
             alt = ""
             />

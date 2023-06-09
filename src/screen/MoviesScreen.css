@@ -1,3 +1,4 @@
+
 .app {
     background-color : #111;
   }
@@ -6,3 +7,28 @@
     padding-top: 10px;
   }
   
+  .row__posterLarge {
+    max-height: 250px;
+}
+
+.movieScreen__posters__image {
+  width : 200;
+  height: 150;
+  padding : 20px;
+  object-fit: cover;
+}
+.movieScreen__moreinfo__description > h1{
+  font-size : 24px;
+  padding-top : 1.25;
+  
+}
+
+.movieScreen__moreinfo__description > h2{
+  font-size : 14px;
+  padding : 1.25;
+}
+
+.movieScreen__image__bookmark {
+  width: 50px;
+  height: 50px;
+}
